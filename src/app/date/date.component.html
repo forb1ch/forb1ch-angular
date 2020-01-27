@@ -1,0 +1,13 @@
+<div class="date-component">
+  <button (click)="toggle($event)">{{isCollapsed ? 'hide time' : 'show time'}}</button>
+
+  <div *ngIf="isCollapsed" class="time-block" id="time-block">
+    <h3>Time is :</h3>
+    <p>{{message}}</p>
+    <p>{{text}}</p>
+  </div>
+
+  <div class="date-form">
+    <input type="text" [value]="text" [(ngModel)]="text">
+  </div>
+</div>
