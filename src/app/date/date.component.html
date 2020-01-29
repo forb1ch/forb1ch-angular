@@ -4,10 +4,10 @@
   <div *ngIf="isCollapsed" class="time-block" id="time-block">
     <h3>Time is :</h3>
     <p>{{message}}</p>
-    <p>{{text}}</p>
-  </div>
+    <p appColorChange>{{text}}</p>
 
-  <div class="date-form">
-    <input type="text" [value]="text" [(ngModel)]="text">
+    <div class="date-form">
+      <input type="text" [value]="text" [(ngModel)]="text">
+    </div>
   </div>
 </div>

@@ -14,6 +14,8 @@ import { HeaderComponent } from './header/header.component';
 import { TodoComponent } from './todo/todo.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ApiServicesService } from './api-services.service';
+import { ColorChangeDirective } from './color-change.directive';
+import { DelayDirective } from './delay.directive';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -33,6 +35,8 @@ const appRoutes: Routes = [
     ServicesComponent,
     HeaderComponent,
     TodoComponent,
+    ColorChangeDirective,
+    DelayDirective,
   ],
   imports: [
     BrowserModule,

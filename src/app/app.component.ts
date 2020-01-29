@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { ApiServicesService } from './api-services.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import set = Reflect.set;
 
 @Component({
   selector: 'app-root',
