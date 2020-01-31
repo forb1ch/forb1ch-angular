@@ -1,0 +1,38 @@
+.burger-menu {
+  display: flex;
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+
+  mat-icon {
+    font-size: 28px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    position: relative;
+    z-index: 4;
+
+    &:hover {
+      color: #11ad7f;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+
+.navigation {
+  width: 290px;
+  position: fixed;
+  right: 0;
+  top: 75px;
+  z-index: 999;
+  background: white;
+  padding: 0 15px;
+  transform: translateX(300px);
+  transition: all .2s ease-in-out;
+  height: 100vh;
+
+  &.opened {
+    border-left: 2px solid;
+    transform: translateX(0);
+    transition: all .2s ease-in-out;
+  }
+}

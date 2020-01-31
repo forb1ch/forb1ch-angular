@@ -1,0 +1,13 @@
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    display: block;
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

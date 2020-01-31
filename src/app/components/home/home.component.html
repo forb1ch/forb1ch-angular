@@ -1,0 +1,10 @@
+<div>
+  <strong>User search:</strong>
+  <input type="text" [(ngModel)]="userId" value="Pur user id" (ngModelChange)="search(userId)">
+</div>
+
+<div *ngIf="user && (user.id == userId)">
+  <p><strong>Registred: </strong>{{user.createdAt}}</p>
+  <p><strong>Name: </strong>{{user.name}}</p>
+  <img src="{{user.avatar}}" alt="avatar">
+</div>

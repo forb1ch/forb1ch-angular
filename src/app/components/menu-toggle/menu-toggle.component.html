@@ -1,0 +1,9 @@
+<div class="menu">
+  <div class="burger-menu toggleEl active" appToggle (click)="toggle()">
+    <mat-icon aria-hidden="false" aria-label="Example reorder icon" class="active1">reorder</mat-icon>
+    <mat-icon aria-hidden="false" aria-label="Example clear icon" class="active1">clear</mat-icon>
+  </div>
+  <div class="navigation" [ngClass]="{ 'opened': isCollapsed }" >
+    <app-menu [toggleVal]="isCollapsed"></app-menu>
+  </div>
+</div>

@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { ApiServicesService } from './api-services.service';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import set = Reflect.set;
+
 
 @Component({
   selector: 'app-root',
@@ -9,15 +7,7 @@ import set = Reflect.set;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  userId: number;
-  user: any;
+  constructor() {
+  }
 
-  constructor(private http: HttpClient) {
-  }
-  search(id) {
-    this.http.get('http://5e0f48f09576aa0014666536.mockapi.io/Angular-study-json/' + this.userId)
-      .subscribe((data) => {
-        this.user = data;
-      });
-  }
 }

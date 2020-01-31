@@ -1,0 +1,28 @@
+.header_wrapper {
+  padding: 20px 15px;
+  align-items: center;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 4;
+  width: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px;
+  border-bottom: 2px solid;
+
+  .logo-wrapper {
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block;
+  }
+}

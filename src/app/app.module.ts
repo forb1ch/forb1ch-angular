@@ -1,27 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { ServicesComponent } from './services/services.component';
-import { ApiServicesService } from './api-services.service';
-import { ColorChangeDirective } from './color-change.directive';
-import { DelayDirective } from './delay.directive';
-import { DateComponent } from './date/date.component';
+import { ApiServicesService } from './services/api-services.service';
+import { ColorChangeDirective } from './directives/color-change.directive';
 import {FormsModule} from '@angular/forms';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HeaderComponent } from './header/header.component';
-import { TodoComponent } from './todo/todo.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HeaderComponent } from './components/header/header.component';
+import { TodoComponent } from './components/todo/todo.component';
 import {HttpClientModule} from '@angular/common/http';
+import { MenuComponent } from './components/menu/menu.component';
+import { MenuToggleComponent } from './components/menu-toggle/menu-toggle.component';
 
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'services', component: ServicesComponent},
   {path: 'todo', component: TodoComponent},
   {path: '**', component: NotFoundComponent}
 ]
@@ -29,17 +26,16 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    DateComponent,
     HomeComponent,
-    AboutComponent,
     NotFoundComponent,
-    ServicesComponent,
     HeaderComponent,
     TodoComponent,
     ColorChangeDirective,
-    DelayDirective,
+    MenuComponent,
+    MenuToggleComponent,
   ],
   imports: [
+    MatIconModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
